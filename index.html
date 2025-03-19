@@ -1,6 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- [Previous HTML content remains the same] -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jennifer Walshe and The New Discipline</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            scroll-behavior: smooth;
+            background-color: #f8f9fa;
+        }
+        .slide {
+            min-height: 100vh;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .slide-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        .nav-dot {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .nav-dot.active {
+            background-color: #3b82f6;
+            transform: scale(1.5);
+        }
+        /* Rest of the CSS remains the same */
+    </style>
+</head>
+<body>
+    <!-- Navigation Dots -->
+    <div class="fixed top-1/2 right-8 transform -translate-y-1/2 z-50 hidden md:block">
+        <div class="flex flex-col space-y-4">
+            <a href="#intro" class="nav-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-blue-500 transition-all" data-slide="intro"></a>
+            <a href="#new-discipline" class="nav-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-blue-500 transition-all" data-slide="new-discipline"></a>
+            <a href="#walshe" class="nav-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-blue-500 transition-all" data-slide="walshe"></a>
+            <a href="#ergomimesis" class="nav-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-blue-500 transition-all" data-slide="ergomimesis"></a>
+            <a href="#historical" class="nav-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-blue-500 transition-all" data-slide="historical"></a>
+            <a href="#walshe-ai" class="nav-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-blue-500 transition-all" data-slide="walshe-ai"></a>
+            <a href="#my-practice" class="nav-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-blue-500 transition-all" data-slide="my-practice"></a>
+            <a href="#connections" class="nav-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-blue-500 transition-all" data-slide="connections"></a>
+            <a href="#conclusion" class="nav-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-blue-500 transition-all" data-slide="conclusion"></a>
+            <a href="#bibliography" class="nav-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-blue-500 transition-all" data-slide="bibliography"></a>
+        </div>
+    </div>
+
+    <!-- Remaining HTML content from previous file -->
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const sections = document.querySelectorAll('.slide');
@@ -34,7 +87,7 @@
                 });
             });
 
-            // Optionally, add click event to navigation dots for smoother scrolling
+            // Add click event to navigation dots for smoother scrolling
             navDots.forEach(dot => {
                 dot.addEventListener('click', (e) => {
                     e.preventDefault();
